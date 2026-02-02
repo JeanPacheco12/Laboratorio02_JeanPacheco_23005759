@@ -134,7 +134,7 @@ fun TrafficLightCircle(color: Color, isOn: Boolean) {
             .size(80.dp)
             .clip(CircleShape)
             // LÓGICA DE COLOR: Si está encendido (isOn), usa el color normal.
-            // Si está apagado, usamos Gris (Color.Gray) para cumplir con el requisito "others = gray".
+            // Si está apagado, usamos Gris (Color.Gray) para cumplir con el requisito: "others = gray".
             .background(if (isOn) color else Color.Gray)
             .border(2.dp, Color.Gray, CircleShape)
     )
