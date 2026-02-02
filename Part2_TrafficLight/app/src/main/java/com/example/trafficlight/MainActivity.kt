@@ -60,17 +60,17 @@ fun TrafficLightScreen(modifier: Modifier = Modifier) {
             // -- ROJO --
             currentState = TrafficState.RED
             statusText = "Stop!"
-            delay(4000) // Espera 4 segundos (4000 milisegundos).
+            delay(2000) // Espera 2 segundos (2000 milisegundos).
 
             // -- VERDE --
             currentState = TrafficState.GREEN
             statusText = "Go!"
-            delay(3000) // Espera 3 segundos (3000 milisegundos).
+            delay(2000) // Espera 2 segundos (2000 milisegundos).
 
             // -- AMARILLO --
             currentState = TrafficState.YELLOW
             statusText = "Caution!"
-            delay(1500) // Espera 1.5 segundos (1,500 milisegundos).
+            delay(1000) // Espera 1 segundo (1000 milisegundos).
 
             // Y vuelve a empezar el while.
         }
@@ -99,8 +99,8 @@ fun TrafficLightScreen(modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier
                 .width(120.dp)
-                .background(Color.DarkGray, shape = RoundedCornerShape(16.dp))
-                .border(2.dp, Color.Black, shape = RoundedCornerShape(16.dp))
+                .background(Color.Black, shape = RoundedCornerShape(16.dp)) // Cambiado a Black para mejor contraste con el gris
+                .border(2.dp, Color.Gray, shape = RoundedCornerShape(16.dp))
                 .padding(vertical = 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -134,9 +134,9 @@ fun TrafficLightCircle(color: Color, isOn: Boolean) {
             .size(80.dp)
             .clip(CircleShape)
             // LÓGICA DE COLOR: Si está encendido (isOn), usa el color normal.
-            // Si está apagado, usa el mismo color pero transparente (alpha 0.2).
-            .background(if (isOn) color else color.copy(alpha = 0.2f))
-            .border(2.dp, Color.Black, CircleShape)
+            // Si está apagado, usamos Gris (Color.Gray) para cumplir con el requisito "others = gray".
+            .background(if (isOn) color else Color.Gray)
+            .border(2.dp, Color.Gray, CircleShape)
     )
 }
 
