@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.rpgcharacterdice.ui.theme.RPGCharacterDiceTheme
-
+// Imports para la visualizacion de colores en los textos (rojo, dorado).
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 
